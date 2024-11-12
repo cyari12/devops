@@ -1,9 +1,7 @@
-function factorial(n) {
-    if (n < 0) {
-        return undefined; // Return undefined for negative numbers
-    }
-    if (n === 0 || n === 1) {
+exports.factorial = function(n) {
+    if(n<0)
+        return undefined
+    else if(n==0)
         return 1;
-    }
-    return n * factorial(n - 1);
+    return n * this.factorial(n-1);
 }
